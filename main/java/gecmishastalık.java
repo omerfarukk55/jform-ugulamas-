@@ -12,12 +12,16 @@ import javax.swing.DefaultListModel;
  */
 public class gecmishastalık extends javax.swing.JFrame {
       DefaultListModel model1;
+     
     /**
+    default liste model sınıfını cagırıyoruz
+    sonra ona model1 veriable tanımlıyoruz.
      * Creates new form gecmishastalık
      */
     public gecmishastalık() {
         initComponents();
         model1=new DefaultListModel();
+        //listeye model1'i set ediyoruz 
         lstgecmishasta.setModel(model1);
     }
 
@@ -174,8 +178,10 @@ public class gecmishastalık extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        gecmiskullandığıilac gecmis=new gecmiskullandığıilac();
-       gecmis.setVisible(true);
-       dispose();
+          //burada da gecmiskullandığıilac sınıfını cagırdık gecmis veriable describe
+       gecmis.setVisible(true); //burada da o sınıfa gecmesini sagladık
+         
+       dispose();//dispose metodu sınıfı değiştirdiğinde onceki sınıfın kapanmasını sagladı 
     }//GEN-LAST:event_jButton2ActionPerformed
     private void jLabel3ActionPerformed(java.awt.event.ActionEvent evt){
         
@@ -211,6 +217,7 @@ public class gecmishastalık extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new gecmishastalık().setVisible(true);
+                 
             }
         });
     }
